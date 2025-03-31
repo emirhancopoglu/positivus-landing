@@ -12,18 +12,21 @@ export default function Header() {
 
   return (
     <>
-      <header className="flex flex-row py-6 justify-between items-center">
+      <header className="flex flex-row pt-6 justify-between items-center">
         <div className="w-[15rem] h-auto">
           <img
             src={PositivusBlackLogo}
-            alt="ss"
-            className="w-full object-cover cursor-pointer"
-          ></img>
+            alt="Positivus Logo"
+            className="w-full object-scale-down cursor-pointer"
+          />
         </div>
 
         <div className="flex flex-row gap-13 items-center">
           {navMenus.map((menu, key) => (
-            <span className="text-[20px] cursor-pointer" key={key}>
+            <span
+              className="text-[20px] cursor-pointer leading-[28px]"
+              key={key}
+            >
               {menu.label}
             </span>
           ))}
