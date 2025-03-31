@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function Container({ children, className, el = "div", clean }) {
-  const rootClassName = "container mx-auto max-w-[90rem]";
+  const rootClassName = "container mx-auto max-md:px-4 max-w-[90rem]";
 
   let Component = el;
 
