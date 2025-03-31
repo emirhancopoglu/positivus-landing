@@ -1,9 +1,14 @@
-import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./routes/app-routes";
 
 function App() {
   return (
     <>
-      <p className="text-red-500">Landing Page</p>
+      <BrowserRouter
+        future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
+      >
+        <AppRoutes />
+      </BrowserRouter>
     </>
   );
 }
