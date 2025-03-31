@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <>
       <header className="flex flex-row max-md:fixed max-md:top-0 max-md:left-0 max-md:w-full max-md:px-4 max-md:py-4 max-md:bg-white pt-6 justify-between items-center">
-        <div className="w-[15rem] max-md:w-[10rem] h-auto">
+        <div className="w-[15rem] max-lg:w-[8rem] max-md:w-[10rem] h-auto">
           <img
             src={PositivusBlackLogo}
             alt="Positivus Logo"
@@ -25,13 +25,16 @@ export default function Header() {
           />
         </div>
 
-        <nav className="hidden md:flex flex-row gap-13 items-center">
+        <nav className="hidden md:flex flex-row gap-13  max-xl:gap-4 items-center">
           {navMenus.map((menu, key) => (
-            <span className="text-xl cursor-pointer leading-[28px]" key={key}>
+            <span
+              className="text-xl max-lg:text-sm cursor-pointer leading-[28px]"
+              key={key}
+            >
               {menu.label}
             </span>
           ))}
-          <button className="text-xl px-[35px] py-[20px] border rounded-[14px] cursor-pointer hover:border-[#B9FF66] hover:bg-[#B9FF66]  transition-all duration-200 ease-in">
+          <button className="text-xl max-lg:text-sm px-[35px] py-[20px] max-lg:px-[17px] max-lg:py-[10px] border rounded-[14px] cursor-pointer hover:border-[#B9FF66] hover:bg-[#B9FF66]  transition-all duration-200 ease-in">
             Request a quote
           </button>
         </nav>
