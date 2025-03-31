@@ -16,8 +16,8 @@ export default function Header() {
 
   return (
     <>
-      <header className="flex flex-row pt-6 justify-between items-center">
-        <div className="w-[15rem] h-auto">
+      <header className="flex flex-row max-md:fixed max-md:top-0 max-md:left-0 max-md:w-full max-md:px-4 max-md:py-4 max-md:bg-white pt-6 justify-between items-center">
+        <div className="w-[15rem] max-md:w-[10rem] h-auto">
           <img
             src={PositivusBlackLogo}
             alt="Positivus Logo"
@@ -41,14 +41,14 @@ export default function Header() {
         <div className="md:hidden">
           <button onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? (
-              <IoMdClose size={40} className="shrink" />
+              <IoMdClose size={30} className="shrink" />
             ) : (
-              <RxHamburgerMenu size={40} className="shrink" />
+              <RxHamburgerMenu size={30} className="shrink" />
             )}
           </button>
         </div>
         {isOpen && (
-          <nav className="fixed top-20 left-0 w-full h-full bg-white flex flex-col items-center justify-center gap-6 z-50">
+          <nav className="fixed top-15 left-0 w-full h-full bg-white flex flex-col items-center justify-center gap-6 z-50">
             {navMenus.map((menu, key) => (
               <span
                 key={key}
