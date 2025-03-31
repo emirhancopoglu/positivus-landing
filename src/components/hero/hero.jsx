@@ -9,7 +9,7 @@ import ZoomLogo from "@/assets/hero/zoom.png";
 import useWindowSize from "../../utils/use-window-size";
 
 export default function Hero() {
-  const { width, height } = useWindowSize();
+  const { width } = useWindowSize();
 
   const companies = [
     {
@@ -43,9 +43,9 @@ export default function Hero() {
       <div className="flex flex-row justify-between mt-18 w-full">
         {width >= 768 ? (
           <>
-            <div className="flex flex-col w-[531px] gap-8">
+            <div className="flex flex-col w-[531px] max-lg:w-1/2 gap-8">
               <h1>Navigating the digital landscape for success</h1>
-              <span className="text-xl leading-[28px] w-[498px] ">
+              <span className="text-xl leading-[28px] w-[498px] max-lg:w-full ">
                 Our digital marketing agency helps businesses grow and succeed
                 online through a range of services including SEO, PPC, social
                 media marketing, and content creation.
@@ -54,7 +54,7 @@ export default function Hero() {
                 Book a consultation
               </button>
             </div>
-            <div className="w-[37rem] h-auto">
+            <div className="w-[37rem] max-lg:w-1/2 h-auto">
               <img
                 src={HeroBanner}
                 alt="Hero Banner"
