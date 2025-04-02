@@ -1,4 +1,7 @@
 import React from "react";
+import useWindowSize from "@/utils/use-window-size";
+import Marquee from "react-fast-marquee";
+
 import HeroBanner from "@/assets/hero/herobanner.png";
 import AmazonLogo from "@/assets/hero/amazon.png";
 import DribbleLogo from "@/assets/hero/dribble.png";
@@ -6,7 +9,6 @@ import HubspotLogo from "@/assets/hero/hubspot.png";
 import NetflixLogo from "@/assets/hero/netflix.png";
 import NotionLogo from "@/assets/hero/notion.png";
 import ZoomLogo from "@/assets/hero/zoom.png";
-import useWindowSize from "../../utils/use-window-size";
 
 export default function Hero() {
   const { width } = useWindowSize();
@@ -85,17 +87,27 @@ export default function Hero() {
           </>
         )}
       </div>
-      <div className="w-full flex flex-row justify-between max-md:flex-wrap items-center mt-18">
-        {companies.map((company, key) => (
-          <div key={key} className="w-[8rem] h-auto">
-            <img
-              src={company.src}
-              alt={company.label}
-              className="w-full h-auto hover:scale-105 object-contain transition-all duration-200 cursor-pointer"
-            />
-          </div>
-        ))}
-      </div>
+      <Marquee
+        autoFill
+        gradient
+        gradientWidth={90}
+        className="overflow-hidden w-full"
+      >
+        <div className="w-full flex flex-row justify-between max-md:flex-wrap items-center mt-18">
+          {companies.map((company, key) => (
+            <div
+              key={key}
+              className="flex items-center justify-center w-full max-md:w-[15rem] h-auto"
+            >
+              <img
+                src={company.src}
+                alt={company.label}
+                className="w-full h-auto hover:scale-105 object-contain transition-all duration-300 cursor-pointer pl-12 pr-12 grayscale-100 hover:grayscale-0"
+              />
+            </div>
+          ))}
+        </div>
+      </Marquee>
     </>
   );
 }
