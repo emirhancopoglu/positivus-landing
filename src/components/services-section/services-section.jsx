@@ -16,66 +16,66 @@ export default function ServicesSection() {
     {
       text: "Search engine",
       secondText: "optimization",
-      cardColor: "F3F3F3",
-      textBackgroundColor: "B9FF66",
-      buttonColor: "191A23",
-      buttonTextColor: "B9FF66",
-      learnMoreColor: "191A23",
+      cardColor: "#F3F3F3",
+      textBackgroundColor: "#B9FF66",
+      buttonColor: "#191A23",
+      buttonTextColor: "#B9FF66",
+      learnMoreColor: "#191A23",
       src: SearchEngineImage,
       srcAlt: "Search Engine",
     },
     {
       text: "Pay-per-click",
       secondText: "advertising",
-      cardColor: "B9FF66",
-      textBackgroundColor: "F3F3F3",
-      buttonColor: "191A23",
-      buttonTextColor: "B9FF66",
-      learnMoreColor: "191A23",
+      cardColor: "#B9FF66",
+      textBackgroundColor: "#f3f3f1",
+      buttonColor: "#191A23",
+      buttonTextColor: "#B9FF66",
+      learnMoreColor: "#191A23",
       src: PayPerClickImage,
       srcAlt: "Search Engine",
     },
     {
       text: "Social Media",
       secondText: "Marketing",
-      cardColor: "191A23",
-      textBackgroundColor: "F3F3F3",
-      buttonColor: "F3F3F3",
-      buttonTextColor: "191A23",
-      learnMoreColor: "F3F3F3",
+      cardColor: "#191A23",
+      textBackgroundColor: "#F3F3F3",
+      buttonColor: "#F3F3F3",
+      buttonTextColor: "#191A23",
+      learnMoreColor: "#F3F3F3",
       src: SocialMediaMarketingImage,
       srcAlt: "Search Engine",
     },
     {
       text: "Email",
       secondText: "Marketing",
-      cardColor: "F3F3F3",
-      textBackgroundColor: "B9FF66",
-      buttonColor: "191A23",
-      buttonTextColor: "B9FF66",
-      learnMoreColor: "191A23",
+      cardColor: "#F3F3F3",
+      textBackgroundColor: "#B9FF66",
+      buttonColor: "#191A23",
+      buttonTextColor: "#B9FF66",
+      learnMoreColor: "#191A23",
       src: EmailSendingImage,
       srcAlt: "Search Engine",
     },
     {
       text: "Content",
       secondText: "Creation",
-      cardColor: "B9FF66",
-      textBackgroundColor: "F3F3F3",
-      buttonColor: "191A23",
-      buttonTextColor: "B9FF66",
-      learnMoreColor: "191A23",
+      cardColor: "#B9FF66",
+      textBackgroundColor: "#F3F3F3",
+      buttonColor: "#191A23",
+      buttonTextColor: "#B9FF66",
+      learnMoreColor: "#191A23",
       src: ContentCreatorImage,
       srcAlt: "Search Engine",
     },
     {
       text: "Analytics and",
       secondText: "Tracking",
-      cardColor: "191A23",
-      textBackgroundColor: "B9FF66",
-      buttonColor: "F3F3F3",
-      buttonTextColor: "191A23",
-      learnMoreColor: "F3F3F3",
+      cardColor: "#191A23",
+      textBackgroundColor: "#B9FF66",
+      buttonColor: "#F3F3F3",
+      buttonTextColor: "#191A23",
+      learnMoreColor: "#F3F3F3",
       src: AnaltyicsImage,
       srcAlt: "Search Engine",
     },
@@ -95,19 +95,22 @@ export default function ServicesSection() {
           {servicesItems.map((item, key) => (
             <div
               key={key}
-              className={`flex flex-row w-[47%] max-md:w-full max-md:gap-0 max-md:flex-col max-md:p-8 max-xl:gap-0 gap-20 border border-b-6 rounded-[45px] p-12 bg-[#${item.cardColor}]`}
+              className={`flex flex-row w-[47%] max-md:w-full max-md:gap-0 max-md:flex-col max-md:p-8 max-xl:gap-0 gap-20 border border-b-6 rounded-[45px] p-12`}
+              style={{ backgroundColor: item.cardColor }}
             >
               {width >= 767 ? (
                 <>
                   <div className="flex flex-col gap-23">
                     <div className="flex flex-col">
                       <h3
-                        className={`bg-[#${item.textBackgroundColor}] px-2 rounded-lg`}
+                        className={`px-2 rounded-lg`}
+                        style={{ backgroundColor: item.textBackgroundColor }}
                       >
                         {item.text}
                       </h3>
                       <h3
-                        className={`bg-[#${item.textBackgroundColor}] px-2 rounded-lg w-[12.5rem]`}
+                        className={`px-2 rounded-lg w-[12.5rem]`}
+                        style={{ backgroundColor: item.textBackgroundColor }}
                       >
                         {item.secondText}
                       </h3>
@@ -115,15 +118,18 @@ export default function ServicesSection() {
 
                     <span className="flex flex-row gap-4 items-center text-xl leading-7 cursor-pointer hover:scale-95 transition-all duration-300">
                       <span
-                        className={`bg-[#${item.buttonColor}] rounded-full`}
+                        className={` rounded-full`}
+                        style={{ backgroundColor: item.buttonColor }}
                       >
                         <MdArrowOutward
                           size={40}
-                          className={`shrink text-[#${item.buttonTextColor}]`}
+                          className={`shrink`}
+                          style={{ color: item.buttonTextColor }}
                         />{" "}
                       </span>{" "}
                       <span
-                        className={`text-[#${item.learnMoreColor}] max-md:hidden`}
+                        className={` max-md:hidden`}
+                        style={{ color: item.learnMoreColor }}
                       >
                         Learn More{" "}
                       </span>
@@ -140,12 +146,14 @@ export default function ServicesSection() {
                   <div className="flex flex-col gap-23">
                     <div className="flex flex-col">
                       <h3
-                        className={`bg-[#${item.textBackgroundColor}] px-2 rounded-lg`}
+                        className={`px-2 rounded-lg`}
+                        style={{ backgroundColor: item.textBackgroundColor }}
                       >
                         {item.text}
                       </h3>
                       <h3
-                        className={`bg-[#${item.textBackgroundColor}] px-2 rounded-lg w-[12.5rem]`}
+                        className={` px-2 rounded-lg w-[12.5rem]`}
+                        style={{ backgroundColor: item.textBackgroundColor }}
                       >
                         {item.secondText}
                       </h3>
@@ -158,15 +166,18 @@ export default function ServicesSection() {
                       />
                       <span className="flex flex-row gap-4 items-center text-xl leading-7 cursor-pointer hover:scale-95 transition-all duration-300">
                         <span
-                          className={`bg-[#${item.buttonColor}] rounded-full`}
+                          className={` rounded-full`}
+                          style={{ backgroundColor: item.buttonColor }}
                         >
                           <MdArrowOutward
                             size={40}
-                            className={`shrink text-[#${item.buttonTextColor}]`}
+                            className={`shrink`}
+                            style={{ color: item.buttonTextColor }}
                           />{" "}
                         </span>{" "}
                         <span
-                          className={`text-[#${item.learnMoreColor}] max-md:hidden`}
+                          className={` max-md:hidden`}
+                          style={{ color: item.learnMoreColor }}
                         >
                           Learn More{" "}
                         </span>
