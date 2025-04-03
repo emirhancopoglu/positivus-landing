@@ -95,7 +95,7 @@ export default function ServicesSection() {
         {servicesItems.map((item, key) => (
           <div
             key={key}
-            className={`flex flex-row w-[47%] max-md:w-full max-md:gap-0 max-md:flex-col max-md:p-8 max-xl:justify-between max-2xl:justify-between gap-20 border border-b-6 rounded-[45px] p-12`}
+            className={`flex flex-row w-[47%] max-md:w-full max-md:gap-0 max-md:flex-col max-md:p-8 max-xl:gap-0 max-xl:justify-between max-2xl:justify-between gap-20 border border-b-6 rounded-[45px] p-12`}
             style={{ backgroundColor: item.cardColor }}
           >
             {width >= 767 ? (

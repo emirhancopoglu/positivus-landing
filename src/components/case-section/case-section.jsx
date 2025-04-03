@@ -1,7 +1,9 @@
 import React from "react";
 import SectionHeader from "../section-header/section-header";
-
+import useWindowSize from "@/utils/use-window-size";
 export default function CaseSection() {
+  const { width } = useWindowSize();
+
   const caseStudiesItem = [
     {
       text: "For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.",
@@ -28,20 +30,40 @@ export default function CaseSection() {
           "Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies"
         }
       />
-
-      <div className="w-full flex flex-row gap-x-16 bg-[#191A23] rounded-[45px] px-[60px] py-[70px] justify-center">
-        {caseStudiesItem.map((item, index) => (
-          <>
-            <div key={index} className="flex flex-col gap-5 w-[18rem]">
-              <p className="text-white">{item.text}</p>
-              <span className="text-[#B9FF66]">{item.buttonText}</span>
-            </div>
-            {item.isBorder === true && (
-              <div className="border border-[#F3F3F3]" />
-            )}
-          </>
-        ))}
-      </div>
+      {width >= 768 ? (
+        <>
+          {" "}
+          <div className="w-full flex flex-row gap-x-16 bg-[#191A23] rounded-[45px] px-[60px] py-[70px] max-lg:px-[30px] max-lg:py-[50px] justify-center">
+            {caseStudiesItem.map((item, index) => (
+              <>
+                <div key={index} className="flex flex-col gap-5 w-[18rem]">
+                  <p className="text-white">{item.text}</p>
+                  <span className="text-[#B9FF66]">{item.buttonText}</span>
+                </div>
+                {item.isBorder === true && (
+                  <div className="border border-[#F3F3F3] " />
+                )}
+              </>
+            ))}
+          </div>{" "}
+        </>
+      ) : (
+        <>
+          <div className="flex flex-row overflow-scroll scroll-smooth gap-4">
+            {caseStudiesItem.map((item, index) => (
+              <div
+                key={index}
+                className="bg-[#191A23] flex w-full rounded-[45px] px-[27px] py-[70px]"
+              >
+                <div className="flex flex-col gap-5 w-[18rem]">
+                  <p className="text-white">{item.text}</p>
+                  <span className="text-[#B9FF66]">{item.buttonText}</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </>
+      )}
     </>
   );
 }
