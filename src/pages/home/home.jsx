@@ -4,6 +4,7 @@ import ServicesSection from "@/components/sections/services-section/services-sec
 import CaseSection from "@/components/sections/case-section/case-section";
 import AccordionSection from "@/components/sections/accordion-section/accordion-section";
 import TeamSection from "@/components/sections/team-section/team-section";
+import TestimonialsSection from "@/components/sections/testimonials-section/testimonials-section";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <CaseSection />
       <AccordionSection />
       <TeamSection />
+      <TestimonialsSection />
     </>
   );
 }
