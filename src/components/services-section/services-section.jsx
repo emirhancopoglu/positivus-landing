@@ -84,39 +84,86 @@ export default function ServicesSection() {
 
   return (
     <>
-      <div className="mt-34 mb-24">
-        <SectionHeader
-          heading={"Services"}
-          description={
-            "At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:"
-          }
-        />
+      <SectionHeader
+        heading={"Services"}
+        description={
+          "At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:"
+        }
+      />
 
-        <div className="w-full flex flex-row justify-between flex-wrap mt-20 gap-y-[40px]">
-          {servicesItems.map((item, key) => (
-            <div
-              key={key}
-              className={`flex flex-row w-[47%] max-md:w-full max-md:gap-0 max-md:flex-col max-md:p-8 max-xl:justify-between max-2xl:justify-between gap-20 border border-b-6 rounded-[45px] p-12`}
-              style={{ backgroundColor: item.cardColor }}
-            >
-              {width >= 767 ? (
-                <>
-                  <div className="flex flex-col gap-23">
-                    <div className="flex flex-col">
-                      <h3
-                        className={`px-2 rounded-lg w-max`}
-                        style={{ backgroundColor: item.textBackgroundColor }}
-                      >
-                        {item.text}
-                      </h3>
-                      <h3
-                        className={`px-2 rounded-lg w-max`}
-                        style={{ backgroundColor: item.textBackgroundColor }}
-                      >
-                        {item.secondText}
-                      </h3>
-                    </div>
+      <div className="w-full flex flex-row justify-between flex-wrap mt-20 gap-y-[40px]">
+        {servicesItems.map((item, key) => (
+          <div
+            key={key}
+            className={`flex flex-row w-[47%] max-md:w-full max-md:gap-0 max-md:flex-col max-md:p-8 max-xl:justify-between max-2xl:justify-between gap-20 border border-b-6 rounded-[45px] p-12`}
+            style={{ backgroundColor: item.cardColor }}
+          >
+            {width >= 767 ? (
+              <>
+                <div className="flex flex-col gap-23">
+                  <div className="flex flex-col">
+                    <h3
+                      className={`px-2 rounded-lg w-max`}
+                      style={{ backgroundColor: item.textBackgroundColor }}
+                    >
+                      {item.text}
+                    </h3>
+                    <h3
+                      className={`px-2 rounded-lg w-max`}
+                      style={{ backgroundColor: item.textBackgroundColor }}
+                    >
+                      {item.secondText}
+                    </h3>
+                  </div>
 
+                  <span className="flex flex-row gap-4 items-center text-xl leading-7 cursor-pointer hover:scale-95 transition-all duration-300">
+                    <span
+                      className={` rounded-full`}
+                      style={{ backgroundColor: item.buttonColor }}
+                    >
+                      <MdArrowOutward
+                        size={40}
+                        className={`shrink`}
+                        style={{ color: item.buttonTextColor }}
+                      />{" "}
+                    </span>{" "}
+                    <span
+                      className={` max-md:hidden`}
+                      style={{ color: item.learnMoreColor }}
+                    >
+                      Learn More{" "}
+                    </span>
+                  </span>
+                </div>
+                <img
+                  src={item.src}
+                  alt={item.srcAlt}
+                  className="object-contain max-md:w-full max-lg:hidden max-xl:w-[12rem]"
+                />
+              </>
+            ) : (
+              <>
+                <div className="flex flex-col gap-23">
+                  <div className="flex flex-col">
+                    <h3
+                      className={`px-2 rounded-lg`}
+                      style={{ backgroundColor: item.textBackgroundColor }}
+                    >
+                      {item.text}
+                    </h3>
+                    <h3
+                      className={` px-2 rounded-lg w-[12.5rem]`}
+                      style={{ backgroundColor: item.textBackgroundColor }}
+                    >
+                      {item.secondText}
+                    </h3>
+                  </div>
+                  <div className="flex flex-row-reverse justify-between">
+                    <img
+                      src={item.src}
+                      alt={item.srcAlt}
+                      className="object-contain max-md:w-1/2"
+                    />
                     <span className="flex flex-row gap-4 items-center text-xl leading-7 cursor-pointer hover:scale-95 transition-all duration-300">
                       <span
                         className={` rounded-full`}
@@ -136,78 +183,29 @@ export default function ServicesSection() {
                       </span>
                     </span>
                   </div>
-                  <img
-                    src={item.src}
-                    alt={item.srcAlt}
-                    className="object-contain max-md:w-full max-lg:hidden max-xl:w-[12rem]"
-                  />
-                </>
-              ) : (
-                <>
-                  <div className="flex flex-col gap-23">
-                    <div className="flex flex-col">
-                      <h3
-                        className={`px-2 rounded-lg`}
-                        style={{ backgroundColor: item.textBackgroundColor }}
-                      >
-                        {item.text}
-                      </h3>
-                      <h3
-                        className={` px-2 rounded-lg w-[12.5rem]`}
-                        style={{ backgroundColor: item.textBackgroundColor }}
-                      >
-                        {item.secondText}
-                      </h3>
-                    </div>
-                    <div className="flex flex-row-reverse justify-between">
-                      <img
-                        src={item.src}
-                        alt={item.srcAlt}
-                        className="object-contain max-md:w-1/2"
-                      />
-                      <span className="flex flex-row gap-4 items-center text-xl leading-7 cursor-pointer hover:scale-95 transition-all duration-300">
-                        <span
-                          className={` rounded-full`}
-                          style={{ backgroundColor: item.buttonColor }}
-                        >
-                          <MdArrowOutward
-                            size={40}
-                            className={`shrink`}
-                            style={{ color: item.buttonTextColor }}
-                          />{" "}
-                        </span>{" "}
-                        <span
-                          className={` max-md:hidden`}
-                          style={{ color: item.learnMoreColor }}
-                        >
-                          Learn More{" "}
-                        </span>
-                      </span>
-                    </div>
-                  </div>
-                </>
-              )}
-            </div>
-          ))}
+                </div>
+              </>
+            )}
+          </div>
+        ))}
+      </div>
+      <div className="relative flex w-full mt-24 px-16 py-11 max-md:py-12 rounded-[45px] justify-between bg-[#F3F3F3] overflow-visible">
+        <div className="flex flex-col gap-7 w-[31.25rem] max-md:w-full justify-center z-10">
+          <h3>Let’s make things happen</h3>
+          <p>
+            Contact us today to learn more about how our digital marketing
+            services can help your business grow and succeed online.
+          </p>
+          <button className="w-3/5 bg-[#191A23] text-[#F3F3F3] font-[400] px-[35px] py-[20px] max-md:w-full rounded-[14px] text-xl leading-[28px] cursor-pointer hover:bg-[#B9FF66] hover:text-[#191A23]  transition-all duration-200 ease-in">
+            Get your free proposal
+          </button>
         </div>
-        <div className="relative flex w-full mt-24 px-16 py-11 max-md:py-12 rounded-[45px] justify-between bg-[#F3F3F3] overflow-visible">
-          <div className="flex flex-col gap-7 w-[31.25rem] max-md:w-full justify-center z-10">
-            <h3>Let’s make things happen</h3>
-            <p>
-              Contact us today to learn more about how our digital marketing
-              services can help your business grow and succeed online.
-            </p>
-            <button className="w-3/5 bg-[#191A23] text-[#F3F3F3] font-[400] px-[35px] py-[20px] max-md:w-full rounded-[14px] text-xl leading-[28px] cursor-pointer hover:bg-[#B9FF66] hover:text-[#191A23]  transition-all duration-200 ease-in">
-              Get your free proposal
-            </button>
-          </div>
-          <div className="absolute -top-10 right-0 transform max-xl:-right-30 -translate-x-1/2 z-0">
-            <img
-              src={ServicesBannerImage}
-              alt="Services Banner Image"
-              className="object-contain w-full max-lg:hidden  max-lg:w-2/4"
-            />
-          </div>
+        <div className="absolute -top-10 right-0 transform max-xl:-right-30 -translate-x-1/2 z-0">
+          <img
+            src={ServicesBannerImage}
+            alt="Services Banner Image"
+            className="object-contain w-full max-lg:hidden  max-lg:w-2/4"
+          />
         </div>
       </div>
     </>
