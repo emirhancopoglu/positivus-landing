@@ -1,5 +1,5 @@
 import React from "react";
-import SectionHeader from "../section-header/section-header";
+import SectionHeader from "../../section-header/section-header";
 import SearchEngineImage from "@/assets/services-section/search-engine.png";
 import PayPerClickImage from "@/assets/services-section/payperclick.png";
 import SocialMediaMarketingImage from "@/assets/services-section/socialmediamarketing.png";

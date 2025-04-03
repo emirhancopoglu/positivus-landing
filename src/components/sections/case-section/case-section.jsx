@@ -1,5 +1,5 @@
 import React from "react";
-import SectionHeader from "../section-header/section-header";
+import SectionHeader from "../../section-header/section-header";
 import useWindowSize from "@/utils/use-window-size";
 export default function CaseSection() {
   const { width } = useWindowSize();
