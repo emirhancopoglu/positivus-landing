@@ -1,6 +1,6 @@
 import React from "react";
 import SectionHeader from "../../section-header/section-header";
-import ContactBannerImage from "../../../assets/sections/contact-section/contactbanner.png";
+import ContactBannerImage from "@/assets/sections/contact-section/contactbanner.png";
 
 export default function ContactSection() {
   return (
