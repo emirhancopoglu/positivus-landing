@@ -28,13 +28,13 @@ export default function Header() {
         <nav className="hidden md:flex flex-row gap-13  max-xl:gap-4 items-center">
           {navMenus.map((menu, key) => (
             <span
-              className="text-xl max-lg:text-sm cursor-pointer leading-[28px]"
+              className="text-xl max-lg:text-sm cursor-pointer leading-[28px] hover:bg-[#B9FF66] hover:rounded-[14px] hover:px-2 transition-all duration-300"
               key={key}
             >
               {menu.label}
             </span>
           ))}
-          <button className="text-xl max-lg:text-sm px-[35px] py-[20px] max-lg:px-[17px] max-lg:py-[10px] border rounded-[14px] cursor-pointer hover:border-[#B9FF66] hover:bg-[#B9FF66]  transition-all duration-200 ease-in">
+          <button className="text-xl max-lg:text-sm px-[35px] py-[20px] max-lg:px-[17px] max-lg:py-[10px] border rounded-[14px] cursor-pointer hover:border-[#B9FF66] hover:bg-[#B9FF66] transition-all duration-200 ease-in">
             Request a quote
           </button>
         </nav>

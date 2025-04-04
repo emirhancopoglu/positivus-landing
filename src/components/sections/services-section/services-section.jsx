@@ -95,7 +95,7 @@ export default function ServicesSection() {
         {servicesItems.map((item, key) => (
           <div
             key={key}
-            className={`flex flex-row w-[47%] max-md:w-full max-md:gap-0 max-md:flex-col max-md:p-8 max-xl:gap-0 max-xl:justify-between max-2xl:justify-between gap-20 border border-b-6 rounded-[45px] p-12`}
+            className="flex flex-row w-[47%] max-md:w-full max-md:gap-0 max-md:flex-col max-md:p-8 max-xl:gap-0 max-xl:justify-between max-2xl:justify-between gap-20 border border-b-6 rounded-[45px] p-12"
             style={{ backgroundColor: item.cardColor }}
           >
             {width >= 767 ? (
@@ -103,13 +103,13 @@ export default function ServicesSection() {
                 <div className="flex flex-col gap-23">
                   <div className="flex flex-col">
                     <h3
-                      className={`px-2 rounded-lg w-max`}
+                      className="px-2 rounded-lg w-max"
                       style={{ backgroundColor: item.textBackgroundColor }}
                     >
                       {item.text}
                     </h3>
                     <h3
-                      className={`px-2 rounded-lg w-max`}
+                      className="px-2 rounded-lg w-max"
                       style={{ backgroundColor: item.textBackgroundColor }}
                     >
                       {item.secondText}
@@ -118,20 +118,20 @@ export default function ServicesSection() {
 
                   <span className="flex flex-row gap-4 items-center text-xl leading-7 cursor-pointer hover:scale-95 transition-all duration-300">
                     <span
-                      className={` rounded-full`}
+                      className="rounded-full"
                       style={{ backgroundColor: item.buttonColor }}
                     >
                       <MdArrowOutward
                         size={40}
-                        className={`shrink`}
+                        className="shrink"
                         style={{ color: item.buttonTextColor }}
-                      />{" "}
-                    </span>{" "}
+                      />
+                    </span>
                     <span
-                      className={` max-md:hidden`}
+                      className="max-md:hidden"
                       style={{ color: item.learnMoreColor }}
                     >
-                      Learn More{" "}
+                      Learn More
                     </span>
                   </span>
                 </div>
@@ -143,16 +143,16 @@ export default function ServicesSection() {
               </>
             ) : (
               <>
-                <div className="flex flex-col gap-23">
+                <div className="flex flex-col gap-23 ">
                   <div className="flex flex-col">
                     <h3
-                      className={`px-2 rounded-lg`}
+                      className="px-2 rounded-lg w-max"
                       style={{ backgroundColor: item.textBackgroundColor }}
                     >
                       {item.text}
                     </h3>
                     <h3
-                      className={` px-2 rounded-lg w-[12.5rem]`}
+                      className="px-2 rounded-lg w-max"
                       style={{ backgroundColor: item.textBackgroundColor }}
                     >
                       {item.secondText}
@@ -166,20 +166,20 @@ export default function ServicesSection() {
                     />
                     <span className="flex flex-row gap-4 items-center text-xl leading-7 cursor-pointer hover:scale-95 transition-all duration-300">
                       <span
-                        className={` rounded-full`}
+                        className="rounded-full"
                         style={{ backgroundColor: item.buttonColor }}
                       >
                         <MdArrowOutward
                           size={40}
-                          className={`shrink`}
+                          className="shrink"
                           style={{ color: item.buttonTextColor }}
-                        />{" "}
-                      </span>{" "}
+                        />
+                      </span>
                       <span
-                        className={` max-md:hidden`}
+                        className="max-md:hidden"
                         style={{ color: item.learnMoreColor }}
                       >
-                        Learn More{" "}
+                        Learn More
                       </span>
                     </span>
                   </div>
