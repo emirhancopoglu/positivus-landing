@@ -21,7 +21,7 @@ export default function Header() {
           <img
             src={PositivusBlackLogo}
             alt="Positivus Logo"
-            className="w-full object-scale-down cursor-pointer"
+            className="w-full object-scale-down cursor-pointer hover:scale-105 transition-all duration-200"
           />
         </div>
 
