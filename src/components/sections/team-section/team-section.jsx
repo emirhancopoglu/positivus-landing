@@ -1,11 +1,11 @@
 import React from "react";
 import SectionHeader from "../../section-header/section-header";
-import JohnSmithImage from "../../../assets/team/johnsmith.png";
-import JaneDoeImage from "../../../assets/team/janedoe.png";
-import MichaelBrownImage from "../../../assets/team/mcihealbrown.png";
-import EmilyJohnsonImage from "../../../assets/team/emilyjhonson.png";
-import BrianWilliamsImage from "../../../assets/team/brianwilliams.png";
-import SarahKimImage from "../../../assets/team/sarahkim.png";
+import JohnSmithImage from "@/assets/sections/team-section/johnsmith.png";
+import JaneDoeImage from "@/assets/sections/team-section/janedoe.png";
+import MichaelBrownImage from "@/assets/sections/team-section/mcihealbrown.png";
+import EmilyJohnsonImage from "@/assets/sections/team-section/emilyjhonson.png";
+import BrianWilliamsImage from "@/assets/sections/team-section/brianwilliams.png";
+import SarahKimImage from "@/assets/sections/team-section/sarahkim.png";
 
 import { FaLinkedinIn } from "react-icons/fa";
 

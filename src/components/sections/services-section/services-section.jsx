@@ -1,12 +1,12 @@
 import React from "react";
 import SectionHeader from "../../section-header/section-header";
-import SearchEngineImage from "@/assets/services-section/search-engine.png";
-import PayPerClickImage from "@/assets/services-section/payperclick.png";
-import SocialMediaMarketingImage from "@/assets/services-section/socialmediamarketing.png";
-import EmailSendingImage from "@/assets/services-section/emailsending.png";
-import ContentCreatorImage from "@/assets/services-section/contentcreator.png";
-import AnaltyicsImage from "@/assets/services-section/analytics.png";
-import ServicesBannerImage from "@/assets/services-section/servicesbannerimage.png";
+import SearchEngineImage from "@/assets/sections/services-section/search-engine.png";
+import PayPerClickImage from "@/assets/sections/services-section/payperclick.png";
+import SocialMediaMarketingImage from "@/assets/sections/services-section/socialmediamarketing.png";
+import EmailSendingImage from "@/assets/sections/services-section/emailsending.png";
+import ContentCreatorImage from "@/assets/sections/services-section/contentcreator.png";
+import AnaltyicsImage from "@/assets/sections/services-section/analytics.png";
+import ServicesBannerImage from "@/assets/sections/services-section/servicesbannerimage.png";
 
 import { MdArrowOutward } from "react-icons/md";
 import useWindowSize from "@/utils/use-window-size";

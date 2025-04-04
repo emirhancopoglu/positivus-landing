@@ -1,5 +1,7 @@
 import React from "react";
 import SectionHeader from "../../section-header/section-header";
+import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa6";
 
 export default function TestimonialsSection() {
   const testimonialsItem = [
@@ -49,10 +51,10 @@ export default function TestimonialsSection() {
             </>
           ))}
         </div>
-        <span className="text-white mt-[124px] mb-[68px]">
-          {" "}
-          Sol Arrow . . . . . Sağ Arrow
-        </span>
+        <div className="text-white mt-[124px] mb-[68px] w-full flex flex-row justify-center gap-30">
+          <FaArrowLeft size={35} />
+          <FaArrowRight size={35} />
+        </div>
       </div>
     </>
   );
