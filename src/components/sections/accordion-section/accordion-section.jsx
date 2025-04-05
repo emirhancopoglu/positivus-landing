@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SectionHeader from "../../section-header/section-header";
 import { FaMinus } from "react-icons/fa";
 import { FaPlus } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function AccordionSection() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -74,23 +75,49 @@ export default function AccordionSection() {
                     {content.caption}
                   </span>
                 </div>
-                <div
+                <motion.div
                   onClick={() => handleToggle(index)}
                   className="rounded-full border bg-[#F3F3F3]"
+                  initial={{ rotate: 0 }}
+                  animate={{ rotate: openIndex === index ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
                 >
                   {openIndex === index ? (
-                    <FaMinus className="px-4 py-4 shrink text-[60px] max-md:text-[40px] max-md:px-2 max-md:py-2" />
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <FaMinus className="px-4 py-4 shrink text-[60px] max-md:text-[40px] max-md:px-2 max-md:py-2" />
+                    </motion.div>
                   ) : (
-                    <FaPlus className="px-4 py-4 shrink text-[60px] max-md:text-[40px] max-md:px-2 max-md:py-2" />
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <FaPlus className="px-4 py-4 shrink text-[60px] max-md:text-[40px] max-md:px-2 max-md:py-2" />
+                    </motion.div>
                   )}
-                </div>
+                </motion.div>
               </div>
-              {openIndex === index && (
-                <>
-                  <div className="w-full border mt-8 mb-8  border-[#191A23]" />
-                  <p>{content.content}</p>
-                </>
-              )}
+              <AnimatePresence initial={false}>
+                {openIndex === index && (
+                  <motion.div
+                    key="content"
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="w-full border mt-8 mb-8 border-[#191A23]" />
+                    <p>{content.content}</p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </>
         ))}
