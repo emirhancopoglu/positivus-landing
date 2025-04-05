@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import SectionHeader from "../../section-header/section-header";
 import ContactBannerImage from "@/assets/sections/contact-section/contactbanner.png";
 
 export default function ContactSection() {
+  const [buttonClick, setButtonClick] = useState(false);
+
   return (
     <>
       <SectionHeader
@@ -19,6 +21,7 @@ export default function ContactSection() {
               <div className="flex flex-row items-center gap-3">
                 <input
                   type="radio"
+                  required
                   id="hello"
                   name="contactOption"
                   value={"hello"}
@@ -50,6 +53,7 @@ export default function ContactSection() {
               <span className="text-[16px]">Email*</span>
               <input
                 type="text"
+                required
                 className="border rounded-[14px] px-[30px] border-black py-[18px] placeholder:text-[#898989] text-lg mt-1.5 outline-none "
                 placeholder="Email"
               />
@@ -58,17 +62,33 @@ export default function ContactSection() {
               <span className="text-[16px]">Message*</span>
               <textarea
                 rows={6}
+                required
                 cols={1}
                 className="border rounded-[14px] px-[30px] border-black py-[18px] placeholder:text-[#898989] text-lg mt-1.5 outline-none "
                 placeholder="Message*"
               />
             </div>
             <div className="w-full flex items-center max-lg:hidden">
-              <button className="w-full bg-[#191A23] text-[#F3F3F3] font-[400] px-[35px] py-[20px] rounded-[14px] text-xl leading-[28px] cursor-pointer hover:bg-[#B9FF66] hover:text-[#191A23]  transition-all duration-200 ease-in">
-                Book a consultation
+              <button
+                onClick={() => {
+                  setButtonClick(true);
+                  setTimeout(() => {
+                    setButtonClick(false);
+                  }, 2000);
+                }}
+                className={`w-full bg-[#191A23] font-[400] px-[35px] py-[20px] rounded-[14px] text-xl leading-[28px] cursor-pointer hover:bg-[#B9FF66] hover:text-[#191A23]  transition-all duration-200 ease-in ${
+                  buttonClick === true
+                    ? "bg-[#B9FF66] text-[#191A23] font-[500] transition-all duration-200"
+                    : "text-[#F3F3F3] transition-all duration-200"
+                } `}
+              >
+                {buttonClick
+                  ? "Message has been sent successfully"
+                  : "Book a consultation"}
               </button>
             </div>
           </div>
+
           <div className="h-auto flex max-lg:hidden">
             <img
               src={ContactBannerImage}
@@ -78,9 +98,23 @@ export default function ContactSection() {
           </div>
         </div>
       </div>
-      <div className="lg:hidden mt-5 px-[30px]">
-        <button className="w-full bg-[#191A23] text-[#F3F3F3] font-[400] px-[35px] py-[20px] rounded-[14px] text-xl leading-[28px] cursor-pointer hover:bg-[#B9FF66] hover:text-[#191A23] transition-all duration-200 ease-in">
-          Book a consultation
+      <div className="lg:hidden mt-5">
+        <button
+          onClick={() => {
+            setButtonClick(true);
+            setTimeout(() => {
+              setButtonClick(false);
+            }, 2000);
+          }}
+          className={`w-full bg-[#191A23] text-[#F3F3F3] font-[400] px-[35px] py-[20px] rounded-[14px] text-lg leading-[28px] cursor-pointer hover:bg-[#B9FF66] hover:text-[#191A23] transition-all duration-200 ease-in ${
+            buttonClick === true
+              ? "bg-[#B9FF66] text-[#191A23] font-[500] transition-all duration-200"
+              : "text-[#F3F3F3] transition-all duration-200"
+          } `}
+        >
+          {buttonClick
+            ? "Message has been sent successfully"
+            : "Book a consultation"}
         </button>
       </div>
     </>

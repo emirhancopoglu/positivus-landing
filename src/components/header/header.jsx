@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import PositivusBlackLogo from "@/assets/header/black.png";
+import PositivusBlackLogo from "@/assets/header/headerlogo.png";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 
@@ -16,7 +16,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="flex flex-row max-md:fixed max-md:top-0 max-md:left-0 max-md:w-full max-md:px-4 max-md:py-4 max-md:bg-white pt-6 justify-between items-center">
+      <header className="flex flex-row max-md:fixed max-md:top-0 max-md:left-0 max-md:w-full max-md:px-4 max-md:py-4 max-md:bg-white pt-6 justify-between items-center z-50">
         <div className="w-[15rem] max-lg:w-[8rem] max-md:w-[10rem] h-auto">
           <img
             src={PositivusBlackLogo}

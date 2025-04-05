@@ -38,7 +38,9 @@ export default function CaseSection() {
               <>
                 <div key={index} className="flex flex-col gap-5 w-[18rem]">
                   <p className="text-white">{item.text}</p>
-                  <span className="text-[#B9FF66]">{item.buttonText}</span>
+                  <span className="text-[#B9FF66] cursor-pointer">
+                    {item.buttonText}
+                  </span>
                 </div>
                 {item.isBorder === true && (
                   <div className="border border-[#F3F3F3] " />

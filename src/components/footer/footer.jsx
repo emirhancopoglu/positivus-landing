@@ -30,7 +30,7 @@ export default function Footer() {
             {footerMenus.map((menu, index) => (
               <li
                 key={index}
-                className="text-lg underline max-lg:no-underline cursor-pointer"
+                className="text-lg underline max-lg:no-underline cursor-pointer hover:bg-[#B9FF66] hover:text-[#292A32] hover:font-[500] hover:rounded-[14px] hover:px-2 transition-all duration-300"
               >
                 {menu.label}
               </li>
@@ -79,7 +79,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="w-full border border-[#F3F3F3] mb-12" />
-        <div className="flex flex-row max-lg:flex-col max-lg:items-center gap-10">
+        <div className="flex flex-row max-lg:flex-col max-lg:items-center max-lg:gap-5 gap-10">
           <span className="text-[#F3F3F3]">
             © 2023 Positivus. All Rights Reserved.
           </span>
