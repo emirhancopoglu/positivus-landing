@@ -78,8 +78,13 @@ export default function TeamSection() {
                 />
 
                 <div className="flex flex-col justify-end">
-                  <h4>{member.fullName}</h4>
-                  <p style={{ fontSize: "16px" }}>{member.position}</p>
+                  <h4 className="max-md:text-center">{member.fullName}</h4>
+                  <p
+                    className="max-md:text-center"
+                    style={{ fontSize: "16px" }}
+                  >
+                    {member.position}
+                  </p>
                 </div>
                 <span className="bg-[#191A23] w-11 h-11 flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 rounded-full">
                   <FaLinkedinIn size={25} className="text-[#B9FF66] shrink " />{" "}
