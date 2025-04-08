@@ -68,13 +68,18 @@ export default function TeamSection() {
           <>
             <div
               key={index}
-              className="border border-b-6 rounded-[45px] w-[26.5rem] max-md:w-[25rem] gap-7 py-[40px] px-[35px]"
+              className="border border-b-6 rounded-[45px] w-[26.5rem] max-md:w-full max-lg:w-[47%] py-[40px] px-[35px]"
             >
-              <div className="flex flex-row justify-between">
-                <img src={member.src} alt={member.fullName} />
-                <div className="flex flex-col justify-end items-center-safe">
+              <div className="w-full flex flex-row justify-between">
+                <img
+                  src={member.src}
+                  alt={member.fullName}
+                  className="object-cover"
+                />
+
+                <div className="flex flex-col justify-end">
                   <h4>{member.fullName}</h4>
-                  <p>{member.position}</p>
+                  <p style={{ fontSize: "16px" }}>{member.position}</p>
                 </div>
                 <span className="bg-[#191A23] w-11 h-11 flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300 rounded-full">
                   <FaLinkedinIn size={25} className="text-[#B9FF66] shrink " />{" "}
@@ -82,7 +87,7 @@ export default function TeamSection() {
               </div>
 
               <div className="border w-full bg-[#191A23] mt-7 mb-7" />
-              <p>{member.description}</p>
+              <p className="leading-6">{member.description}</p>
             </div>
           </>
         ))}

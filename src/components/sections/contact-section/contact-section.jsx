@@ -106,7 +106,7 @@ export default function ContactSection() {
               setButtonClick(false);
             }, 2000);
           }}
-          className={`w-full bg-[#191A23] text-[#F3F3F3] font-[400] px-[35px] py-[20px] rounded-[14px] text-lg leading-[28px] cursor-pointer hover:bg-[#B9FF66] hover:text-[#191A23] transition-all duration-200 ease-in ${
+          className={`w-full bg-[#191A23] text-[#F3F3F3] font-[400] px-[35px] py-[20px] rounded-[14px] text-base leading-[28px] cursor-pointer hover:bg-[#B9FF66] hover:text-[#191A23] transition-all duration-200 ease-in ${
             buttonClick === true
               ? "bg-[#B9FF66] text-[#191A23] font-[500] transition-all duration-200"
               : "text-[#F3F3F3] transition-all duration-200"

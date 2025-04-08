@@ -189,7 +189,7 @@ export default function ServicesSection() {
           </div>
         ))}
       </div>
-      <div className="relative flex w-full mt-24 px-16 py-11 max-md:py-12 rounded-[45px] justify-between bg-[#F3F3F3] overflow-visible">
+      <div className="relative flex w-full mt-24 px-16 py-11 max-md:py-12 max-md:px-8 rounded-[45px] justify-between bg-[#F3F3F3] overflow-visible">
         <div className="flex flex-col gap-7 w-[31.25rem] max-md:w-full justify-center z-10">
           <h3>Let’s make things happen</h3>
           <p>
